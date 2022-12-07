@@ -3,7 +3,9 @@
 
 Berikut Milestone yang telah kami bat sesuai dengan metode pengembangan yang akan kami pakai : 
 
-1 [Requirements Gathering and Analysis/Planning] (https://gitlab.com/hanisftryaa/gifttt.co/-/issues/1)
+1 [Requirements Gathering and Analysis/Planning] (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/2#tab-issues) 
+2.[Quick Design] (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/3#tab-issues)
+
 
 ## Getting started
 
