@@ -1,6 +1,9 @@
 # Gifttt.co
 
 
+Berikut Milestone yang telah kami bat sesuai dengan metode pengembangan yang akan kami pakai : 
+
+1 [Requirements Gathering and Analysis/Planning] (https://gitlab.com/hanisftryaa/gifttt.co/-/issues/1)
 
 ## Getting started
 
