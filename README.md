@@ -3,10 +3,10 @@
 ## Milestones
 Berikut Milestone yang telah kami buat sesuai dengan metode pengembangan yang akan kami pakai : 
 
-- 1. [Requirements Gathering and Analysis/Planning] (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/2#tab-issues) 
-- 2. [Quick Design] (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/3#tab-issues)
-- 3. [Build Prototype] (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/11#tab-issues)
-- 4. [Evaluasi Prototype] (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/5#tab-issues)
+- (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/2#tab-issues) 
+- (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/3#tab-issues)
+- (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/11#tab-issues)
+- (https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/5#tab-issues)
 
 
 
