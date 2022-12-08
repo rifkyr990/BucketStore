@@ -12,7 +12,11 @@ Berikut Milestone yang telah kami buat sesuai dengan metode pengembangan yang ak
 - [ ] [1. Requirements Gathering and Analysis/Planning](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/2#tab-issues) 
 - [ ] [2. Quick Design](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/3#tab-issues)
 - [ ] [3. Build Prototype](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/11#tab-issues)
-- [ ] [3. Evaluasi Prototype](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/5#tab-issues)
+- [ ] [4. Evaluasi Prototype](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/5#tab-issues)
+- [ ] [5. Mengkodekan System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/6#tab-issues)
+- [ ] [6. Menguji System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/7#tab-issues)
+- [ ] [7. Evaluasi System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/8#tab-issues)
+- [ ] [8. Penggunaan System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/9#tab-issues)
 
 
 
@@ -104,4 +108,4 @@ Show your appreciation to those who have contributed to the project.
 For open source projects, say how it is licensed.
 
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Ongoing
