@@ -304,7 +304,7 @@ html{
 }
 #side1{
     background-color: #311b04;
-    height: 76vh;
+    height: 80vh;
     border-radius: 5px;
     box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
 }
@@ -332,15 +332,27 @@ html{
     align-items: center;
     text-align: center;
 }
+
+#side1 p:hover{
+    color: #9e8787;    
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+
 #btn{
     align-items: center;
     text-align: center;
-    border: 2px solid white;
-    border-radius: 10px;
+
 }
 #btn a{
     text-decoration: none;
     color: white;
+}
+
+#btn a:hover{
+    text-decoration: none;
+    color: #9e8787;
 }
 #side2{
     background-color: white;
@@ -364,9 +376,17 @@ html{
     align-items: center;
 }
 #side2 p{
+    color: #311b04;
     margin-top: 20px;
     cursor: pointer;
 }
+
+#side2 p:hover{
+    color: #9e8787;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
 #side2 .icons i{
     margin-left: 10px;
     cursor: pointer;
