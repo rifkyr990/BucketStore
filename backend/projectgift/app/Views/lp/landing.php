@@ -9,7 +9,7 @@
         <p>"When you have a problem, we have a solution"</p>
     </div>
     <div class="img">
-        <img src="./image/logo2.jpg" alt="">
+        <img src="/img/logo2.jpg" alt="">
     </div>
 </section>
 
@@ -45,14 +45,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-1.png" alt="">
+                        <img src="/img/uang-3.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
-                            Snack-1
+                            Money-7
                         </h5>
                         <h6>
-                            Rp.
+                            Rp110.000
                         </h6>
                     </div>
                 </div>
@@ -70,14 +70,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-2.png" alt="">
+                        <img src="/img/buket-2.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-2
                         </h5>
                         <h6>
-                            Rp.
+                            Rp120.000
                         </h6>
                     </div>
                 </div>
@@ -95,14 +95,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-3.png" alt="">
+                        <img src="/img/uang-5.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
-                            Snack-3
+                            Money-8
                         </h5>
                         <h6>
-                            Rp.
+                            Rp75.000
                         </h6>
                     </div>
                 </div>
@@ -120,14 +120,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-4.png" alt="">
+                        <img src="/img/buket-4.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-4
                         </h5>
                         <h6>
-                            Rp.
+                            Rp40.000
                         </h6>
                     </div>
                 </div>
@@ -145,14 +145,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-9.png" alt="">
+                        <img src="/img/buket-9.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-5
                         </h5>
                         <h6>
-                            Rp.
+                            Rp30.000
                         </h6>
                     </div>
                 </div>
@@ -170,14 +170,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-10.png" alt="">
+                        <img src="/img/buket-10.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-6
                         </h5>
                         <h6>
-                            Rp.
+                            Rp50.000
                         </h6>
                     </div>
                 </div>
@@ -195,14 +195,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-11.png" alt="">
+                        <img src="/img/buket-11.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-7
                         </h5>
                         <h6>
-                            Rp.
+                            Rp75.000
                         </h6>
                     </div>
                 </div>
@@ -220,14 +220,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-13.png" alt="">
+                        <img src="/img/buket-13.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-8
                         </h5>
                         <h6>
-                            Rp.
+                            Rp60.000
                         </h6>
                     </div>
                 </div>

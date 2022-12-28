@@ -2,20 +2,10 @@
 
 <?= $this->section('content'); ?>
 
-<section class="inner_page_head">
-    <div class="container_fuild">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="full">
-                    <h3>Our Product</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="product_section layout_padding">
     <div class="container">
         <div class="heading_container heading_center">
+            <h1 class="text-center">SNACK</h1>
         </div>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3">
@@ -25,7 +15,7 @@
                             <a href="keranjang.html" class="option1">
                                 Add To Cart
                             </a>
-                            <a href="" class="option2">
+                            <a href="detailproduk.html" class="option2">
                                 Detail
                             </a>
                         </div>
@@ -38,7 +28,7 @@
                             Snack-1
                         </h5>
                         <h6>
-                            Rp.
+                            Rp100.000
                         </h6>
                     </div>
                 </div>
@@ -56,14 +46,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-2.png" alt="">
+                        <img src="/img/buket-2.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-2
                         </h5>
                         <h6>
-                            Rp.
+                            Rp120.000
                         </h6>
                     </div>
                 </div>
@@ -81,14 +71,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-3.png" alt="">
+                        <img src="/img/buket-3.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-3
                         </h5>
                         <h6>
-                            Rp.
+                            Rp35.000
                         </h6>
                     </div>
                 </div>
@@ -106,14 +96,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-4.png" alt="">
+                        <img src="/img/buket-4.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-4
                         </h5>
                         <h6>
-                            Rp.
+                            Rp40.000
                         </h6>
                     </div>
                 </div>
@@ -131,14 +121,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-9.png" alt="">
+                        <img src="/img/buket-9.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-5
                         </h5>
                         <h6>
-                            Rp.
+                            Rp30.000
                         </h6>
                     </div>
                 </div>
@@ -150,20 +140,20 @@
                             <a href="keranjang.html" class="option1">
                                 Add To Cart
                             </a>
-                            <a href="" class="option2">
+                            <a href="detailproduk.html" class="option2">
                                 Detail
                             </a>
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-10.png" alt="">
+                        <img src="/img/buket-10.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-6
                         </h5>
                         <h6>
-                            Rp.
+                            Rp50.000
                         </h6>
                     </div>
                 </div>
@@ -181,14 +171,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-11.png" alt="">
+                        <img src="/img/buket-11.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-7
                         </h5>
                         <h6>
-                            Rp.
+                            Rp75.000
                         </h6>
                     </div>
                 </div>
@@ -206,14 +196,14 @@
                         </div>
                     </div>
                     <div class="img-box">
-                        <img src="image/buket-13.png" alt="">
+                        <img src="/img/buket-13.png" alt="">
                     </div>
                     <div class="detail-box">
                         <h5>
                             Snack-8
                         </h5>
                         <h6>
-                            Rp.
+                            Rp60.000
                         </h6>
                     </div>
                 </div>
