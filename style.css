@@ -180,17 +180,19 @@
 #navbar .other-links{
     margin-right: 33px;
 }
-.other-links i{
+.other-links i a{
     color:  #f5f0ea;
     font-size: 20px;
     margin-left: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
-.other-links i:hover{
+.other-links i a:hover{
     color:  #9e8787;
     font-size: 20px;
     margin-left: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 /* navbar */
 /* home content */
