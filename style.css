@@ -753,3 +753,9 @@ html{
         }
 
     }
+
+    .gradient-custom {
+        background: #f5f0ea;
+        background: -webkit-linear-gradient(to top left, rgb(248, 238, 223), rgba(246, 243, 255, 1));
+        background: linear-gradient(to top left, rgb(248, 238, 223), rgba(246, 243, 255, 1));
+        }
