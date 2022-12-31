@@ -246,3 +246,9 @@
           justify-content: center;
   margin-top: 45px;
 }
+
+.gradient-custom {
+  background: #311b04;
+  background: -webkit-linear-gradient(to right bottom, #311b04, #311b04);
+  background: linear-gradient(to right bottom, #311b04, #311b04)
+  }
