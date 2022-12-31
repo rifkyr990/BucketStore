@@ -39,8 +39,8 @@
                 Product
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #311b04;">
-                <li><a class="dropdown-item" href="<?= site_url("product/product2"); ?>">Snack</a></li>
-                <li><a class="dropdown-item" href="<?= site_url("product/product1"); ?>">Money</a></li>
+                <li><a class="dropdown-item" href="<?= site_url("snack/index"); ?>">Snack</a></li>
+                <li><a class="dropdown-item" href="<?= site_url("money/index"); ?>">Money</a></li>
               </ul>
             </li>
           </ul>

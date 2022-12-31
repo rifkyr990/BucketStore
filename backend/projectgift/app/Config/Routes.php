@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\Snack;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -37,8 +39,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/lp/landing', 'Landing::index');
-$routes->get('/product/product1', 'Product::product1');
-$routes->get('/product/product2', 'Product::product2');
+$routes->get('/snack/index', 'Snack::index');
+$routes->get('/snack/(:segment)', 'Snack::detail/$1');
+$routes->get('/money/index', 'Money::index');
+$routes->get('/money/(:segment)', 'Money::detail/$1');
 
 /*
  * --------------------------------------------------------------------
