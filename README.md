@@ -16,7 +16,7 @@ Berikut Milestone yang telah kami buat sesuai dengan metode pengembangan yang ak
 - [x] [5. Mengkodekan System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/6#tab-issues)
 - [x] [6. Menguji System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/7#tab-issues)
 - [x] [7. Evaluasi System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/8#tab-issues)
-- [ ] [8. Penggunaan System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/9#tab-issues)
+- [x] [8. Penggunaan System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/9#tab-issues)
 
 ## Project status
 Selesai
