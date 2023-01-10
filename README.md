@@ -4,7 +4,7 @@ gifttt.co merupakan website yang digunakan oleh customer dan admin. Dengan mengg
 Anggota yang berkontributor dalam project ini yaitu:
 - Hanis Fitriya D S 2000016040
 - Dewi Nur A 2000016042
-- Retno Ayu Wulandari
+- Retno Ayu Wulandari 2000016063
 
 ## Milestones
 Berikut Milestone yang telah kami buat sesuai dengan metode pengembangan yang akan kami pakai : 
