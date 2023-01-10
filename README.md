@@ -19,4 +19,4 @@ Berikut Milestone yang telah kami buat sesuai dengan metode pengembangan yang ak
 - [ ] [8. Penggunaan System](https://gitlab.com/hanisftryaa/gifttt.co/-/milestones/9#tab-issues)
 
 ## Project status
-Ongoing
+Se
