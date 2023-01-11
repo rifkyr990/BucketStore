@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Kost;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -13,8 +13,8 @@ class Category extends Model
         'nama_kategori',
     ];
 
-    public function kosts()
+    public function products()
     {
-        return $this->hasMany(Kost::class, 'category_id', 'id');
+        return $this->hasMany(Product::class, 'category_id', 'id');
     }
 }

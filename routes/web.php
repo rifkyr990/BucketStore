@@ -21,30 +21,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('dashboard', [App\Http\Controllers\KostController::class, 'index'])->name('dashboard');
-Route::get('create', [App\Http\Controllers\KostController::class, 'create'])->name('create');
-Route::get('show/{kost}', [App\Http\Controllers\KostController::class, 'show'])->name('show');
-Route::get('edit/{kost}', [App\Http\Controllers\KostController::class, 'edit'])->name('edit');
-Route::put('edit/{kost}', [App\Http\Controllers\KostController::class, 'update'])->name('update');
-Route::delete('/{kost}', [App\Http\Controllers\KostController::class, 'destroy'])->name('destroy');
-Route::post('/addkost', [App\Http\Controllers\KostController::class, 'addkost'])->name('addkost');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'home'])->name('landing');
+Route::get('dashboard', [App\Http\Controllers\ProductController::class, 'index'])->name('dashboard');
+Route::get('create', [App\Http\Controllers\ProductController::class, 'create'])->name('create');
+Route::get('show/{product}', [App\Http\Controllers\ProductController::class, 'show'])->name('show');
+Route::get('edit/{product}', [App\Http\Controllers\ProductController::class, 'edit'])->name('edit');
+Route::put('edit/{product}', [App\Http\Controllers\ProductController::class, 'update'])->name('update');
+Route::delete('/{product}', [App\Http\Controllers\ProductController::class, 'destroy'])->name('destroy');
+Route::post('/addproduct', [App\Http\Controllers\ProductController::class, 'addproduct'])->name('addproduct');
 
-Route::get('allkost', [App\Http\Controllers\KostController::class, 'allkost'])->name('allkost');
-Route::get('umy', [App\Http\Controllers\KostController::class, 'umy'])->name('umy');
-Route::get('uad', [App\Http\Controllers\KostController::class, 'uad'])->name('uad');
-Route::get('ugm', [App\Http\Controllers\KostController::class, 'ugm'])->name('ugm');
-Route::get('uty', [App\Http\Controllers\KostController::class, 'uty'])->name('uty');
-Route::get('amikom', [App\Http\Controllers\KostController::class, 'amikom'])->name('amikom');
-Route::get('uii', [App\Http\Controllers\KostController::class, 'uii'])->name('uii');
-Route::get('uaa', [App\Http\Controllers\KostController::class, 'uaa'])->name('uaa');
-
+Route::get('allproduct', [App\Http\Controllers\ProductController::class, 'allproduct'])->name('allproduct');
+Route::get('uang', [App\Http\Controllers\ProductController::class, 'uang'])->name('uang');
+Route::get('snack', [App\Http\Controllers\ProductController::class, 'snack'])->name('snack');
 
 Route::get('ganti/{reservasi}', [App\Http\Controllers\ReservasiController::class, 'ganti'])->name('ganti');
 Route::put('ganti/{reservasi}', [App\Http\Controllers\ReservasiController::class, 'perbaharui'])->name('perbaharui');
-Route::get('create/{kost}', [App\Http\Controllers\ReservasiController::class, 'create'])->name('create');
-Route::post('/addreserv/{kost}', [App\Http\Controllers\ReservasiController::class, 'addreserv'])->name('addreserv');
+Route::get('create/{product}', [App\Http\Controllers\ReservasiController::class, 'create'])->name('create');
+Route::post('/addreserv/{product}', [App\Http\Controllers\ReservasiController::class, 'addreserv'])->name('addreserv');
 Route::get('myorder', [App\Http\Controllers\ReservasiController::class, 'myorder'])->name('myorder');
 Route::get('confirm', [App\Http\Controllers\ReservasiController::class, 'confirm'])->name('confirm');
 Route::get('/reservasi/payment/{reservasi}', [App\Http\Controllers\ReservasiController::class, 'payment'])->name('payment');

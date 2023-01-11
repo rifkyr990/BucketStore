@@ -11,20 +11,22 @@ class Reservasi extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'kost_id',
+        'product_id',
         'nama_pemesan',
         'alamat_pemesan',
         'telp',
         'tanggal',
+        'jumlah',
+        'tanggal_ambil',
         'total_cost',
         'pembayaran_id',
         'status_id',
         'user_id',
     ];
 
-    public function kost()
+    public function products()
     {
-        return $this->belongsTo(Kost::class);
+        return $this->belongsTo(Product::class);
     }
 
     public function status()

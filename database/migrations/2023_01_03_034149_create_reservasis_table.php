@@ -15,11 +15,15 @@ return new class extends Migration
     {
         Schema::create('reservasis', function (Blueprint $table) {
             $table->id();
-            $table->integer('kost_id');
+            $table->integer('product_id');
+            $table->string('nama_product');
+            $table->integer('harga');
             $table->string('nama_pemesan');
             $table->text('alamat_pemesan');
             $table->integer('telp');
             $table->date('tanggal');
+            $table->date('tanggal_ambil');
+            $table->integer('jumlah');
             $table->integer('total_cost');
             $table->integer('pembayaran_id')->default('1');
             $table->integer('status_id')->default('1');

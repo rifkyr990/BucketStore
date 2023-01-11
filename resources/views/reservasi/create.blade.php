@@ -4,8 +4,8 @@
 <body>
     <div class="container">
         <div class="col-sm-12 mt-5 text-center">
-            <h2 class="fw-bold text-green">Reservation Form</h2>
-            <div class="custom-separator my-3 mb-5 mx-auto bg-brown"></div>
+            <h2 class="fw-bold text-green">Order Form</h2>
+            <div class="custom-separator mb-2 mx-auto bg-dark"></div>
         </div>
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,7 +19,7 @@
         @else
 
         @endif
-        <form action="{{ route('addreserv', $kost->id) }}" method="POST" enctype="multipart/form-data"
+        <form action="{{ route('addreserv', $product->id) }}" method="POST" enctype="multipart/form-data"
             class="w-75 d-block mx-auto">
             @csrf
             <div class="row">
@@ -44,11 +44,23 @@
                             placeholder="alamat"></textarea>
                     </div>
                 </div>
+                <div class="col-xs-12 my-sm-2">
+                    <div class="form-group">
+                        <p><strong>Jumlah pesanan</strong></p>
+                        <input type="number" name="jumlah" id="jumlah" class="form-control">
+                    </div>
+                </div>
+                <div class="col-xs-12 my-sm-2">
+                    <div class="form-group">
+                        <p><strong>Tanggal order</strong></p>
+                        <input type="date" name="tanggal" id="tanggal" class="form-control">
+                    </div>
+                </div>
 
                 <div class="col-xs-12 my-sm-2">
                     <div class="form-group">
-                        <p><strong>Tanggal reservasi</strong></p>
-                        <input type="date" name="tanggal" id="tanggal" class="form-control">
+                        <p><strong>Tanggal ambil</strong></p>
+                        <input type="date" name="tanggal_ambil" id="tanggal_ambil" class="form-control">
                     </div>
                 </div>
                 <div class="col-xs-12 my-sm-4">

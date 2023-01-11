@@ -14,49 +14,41 @@
 <body>
     <section class="method-payment py-2 mt-5">
         <div class="container mt-5 mb-5 d-flex justify-content-center">
-            <div class="card p-5">
-                <div>
-                    <h4 class="heading">Pembayaran</h4>
-                    <p class="text">Silahkan memilih salah satu metode pembayaran dibawah ini, dan mohon melakukan
-                        konfirmasi setelah pembayaran berhasil</p>
+            <div class="card-body text-start text-black p-4">
+                <h5 class="card-title text-uppercase mb-5" id="examplecardLabel">{{ Auth::user()->name }}</h5>
+                <h4 class="mb-5" style="color: #35558a;">Thanks for your order</h4>
+                <p class="mb-0" style="color: #35558a;">Payment summary</p>
+                <hr class="mt-2 mb-4"
+                    style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
+
+                <div class="d-flex justify-content-between">
+                    <p class="fw-bold mb-0">Ether Chair(Qty:1)</p>
+                    <p class="text-muted mb-0">$1750.00</p>
                 </div>
-                <span class="detail mt-3">Metode Pembayaran :</span>
-                <div class="credit rounded mt-4 d-flex justify-content-between align-items-center">
-                    <div class="d-flex flex-row align-items-center"> <img src="{{ asset('asset/img/dana.png') }}"
-                            class="rounded bg-transparent p-2 ml-5" width="110">
-                        <div class="d-flex flex-column ml-3 mx-2"> <span class="business fw-bold">Rifky Ramadhan</span> <span
-                                class="plan">0895 3944 77132</span> </div>
-                    </div>
-                    <div> <input type="text" class="form-control cvv" placeholder="CVC" hidden> </div>
+
+                <div class="d-flex justify-content-between">
+                    <p class="small mb-0">Shipping</p>
+                    <p class="small mb-0">$175.00</p>
                 </div>
-                <div class="credit rounded mt-2 d-flex justify-content-between align-items-center">
-                    <div class="d-flex flex-row align-items-center"> <img src="{{ asset('asset/img/shopee.svg') }}"
-                            class="rounded" width="110">
-                        <div class="d-flex flex-column ml-3 mx-2"> <span class="business fw-bold">Rifky Ramadhan</span> <span
-                                class="plan">0895 3944 77132</span> </div>
-                    </div>
-                    <div> <input type="text" class="form-control cvv" placeholder="CVC" hidden> </div>
+
+                <div class="d-flex justify-content-between pb-1">
+                    <p class="small">Tax</p>
+                    <p class="small">$200.00</p>
                 </div>
-                <span class="detail fs-5 mt-3">Atau bisa dengan :</span>
-                <div class="credit rounded mt-3 d-flex justify-content-between align-items-center">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Cash On Delivery
-                            </label>
-                        </div>
-                    </div>
+
+                <div class="d-flex justify-content-between">
+                    <p class="fw-bold">Total</p>
+                    <p class="fw-bold" style="color: #35558a;">{{ number_format($reservasi->total_cost)}}</p>
                 </div>
-                <p class="mb-0 mt-3 fs-5"><strong>Total pembayaran : </strong> Rp {{number_format($reservasi->total_cost)}}</p>
-                <div class="mt-5"> 
-                <button class="btn btn-primary btn-block payment-button"><a href="{{ url('/confirm') }}"
-                            class="text-light text-decoration-none">Konfirmasi Pembayaran <i
-                                class="fa fa-long-arrow-right"></i></a></button>
-                    <button class="btn btn-danger btn-block payment-button mx-2"><a href="{{ url('home') }}"
-                            class="text-light text-decoration-none">Selesai <i
-                                class="fa fa-long-arrow-right"></i></a></button></div>
+
+                <div class="d-flex justify-content-between">
+                    <p class="fw-bold"></p>
+                    <a type="button" class="btn btn-primary btn-md mb-1 text-decoration-none border-0" style="background-color: #311B04; width: 230px;" href="{{url('myorder')}}">
+                        Track your order
+                    </a>
+                </div>
             </div>
+        </div>
         </div>
     </section>
 </body>

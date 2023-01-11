@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Gift.co') }}</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
         integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
@@ -32,10 +32,10 @@
 <body>
     <div id="app">
         @if (Auth::check())
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #311B04;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Kosku') }}
+                    <img src="{{asset('asset/img/nav.png')}}" alt="" width="120px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -55,39 +55,48 @@
                         @guest
                         @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @endif
 
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link text-light" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                         @endif
                         @else
                         <li class="nav-item mx-2"><a href="{{ route('home') }}"
-                                class="nav-link text-decoration-none fw-normal">Home</a></li>
-                        <li class="nav-item mx-2"><a href="{{ route('allkost') }}"
-                                class="nav-link text-decoration-none fw-normal">Kost</a>
+                                class="nav-link text-light text-decoration-none fw-normal">Home</a></li>
+                        <li class="nav-item mx-2 dropdown-center">
+                            <a href="{{ route('allproduct') }}"
+                                class="nav-link text-light text-decoration-none fw-normal dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">Produk</a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="{{ route('uang') }}">Bouquet uang</a></li>
+                                <li><a class="dropdown-item" href="{{ route('snack') }}">Bouquet snack</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item mx-2"><a href="" class="nav-link text-decoration-none fw-normal">About</a>
+                        <li class="nav-item mx-2"><a href=""
+                                class="nav-link text-light text-decoration-none fw-normal">About</a>
                         </li>
                         <img src="https://img.icons8.com/color/96/000000/user.png" class="img-radius"
                             alt="User-Profile-Image">
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link text-light dropdown-toggle fw-bold" href="#"
+                                role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <!-- <a href="{{ route('myorder') }}" class="dropdown-item text-decoration-none">Pesanan saya</a> -->
                                 @if (Auth::user()->role_as == '1')
-                                <a href="{{ url('/dashboard') }}" class="dropdown-item text-decoration-none">Dashboard</a>
+                                <a href="{{ url('/dashboard') }}"
+                                    class="dropdown-item text-decoration-none">Dashboard</a>
                                 <a href="{{ url('/create') }}" class="dropdown-item text-decoration-none">Upload
-                                    Kosan</a>
+                                    Produk</a>
                                 @endif
-                                <a href="{{ route('myorder') }}" class="dropdown-item text-decoration-none">Reservasi
+                                <a href="{{ route('myorder') }}" class="dropdown-item text-decoration-none">Pesanan
                                     Ku</a>
                                 <a href="{{ url('/confirm') }}" class="dropdown-item text-decoration-none">Konfirmasi
                                     pembayaran</a>
@@ -111,7 +120,7 @@
             @yield('content')
         </main>
     </div>
-
+    
     <script src="{{ asset('asset/js/script.js')}}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<body class="bg-cream">
 <div class="container">
     <section class="ftco-section">
         <div class="container">
@@ -67,12 +68,12 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="form-control form-control-sm btn btn-primary rounded submit px-3">
+                                    <button type="submit" class="form-control form-control-sm btn btn-brown text-light rounded submit px-3">
                                         {{ __('Register') }}
                                     </button>
                                 </div>
                             </form>
-                            <p class="text-center">Sudah daftar ? <a data-toggle="tab"
+                            <p class="text-center mt-2">Sudah daftar ? <a data-toggle="tab"
                                     href="{{ route('login') }}">Masuk</a></p>
                         </div>
                         
@@ -82,4 +83,5 @@
         </div>
     </section>
 </div>
+</body>
 @endsection

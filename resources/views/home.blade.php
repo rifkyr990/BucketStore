@@ -1,112 +1,52 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="landing">
+
+<body class="bg-cream">
     <div class="container">
-        <div class="text-center d-flex justify-content-center w-100 flex-column " style="height: 500px;">
-            <div class="main">
-                <h2 class="text-light">Kostku</h2>
-                <p class="d-block mx-auto w-50 my-4 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, repellat consequuntur esse doloribus, facilis nostrum ut delectus commodi harum voluptatum, beatae animi voluptas blanditiis perferendis perspiciatis odit dignissimos debitis a.</p>
-                <a href="{{route('allkost') }}" class="btn btn-primary my-3 text-decoration-none">Cari sekarang</a>
+        <div class="row justify-content-between vh-100">
+            <div class="col-lg-7 order-2 order-lg-1 d-flex align-items-center">
+                <div data-aos="zoom-out">
+                    <h1 class="display-6 fw-bold">Bouquet & Craft</h1>
+                    <h2 class="display-5 fw-bold">Natural & Beautiful Bouquet</h2>
+                    <p class="fs-5">“When you have a problem, we have a solution”</p>
+                    <div class="text-center text-lg-start">
+                        <a href="" class="css-button-rounded--green text-decoration-none text-center">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-1 order-lg-2 hero-img my-auto" data-aos="zoom-out" data-aos-delay="300">
+                <img src="{{ asset('asset/img/logo.png') }}" class="img-fluid w-100" alt="gambar">
             </div>
         </div>
     </div>
-</section>
-<div class="container my-5">
-    <div
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 d-flex justify-content-center align-content-center ">
-        <div class="col d-flex justify-content-center align-content-center">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('asset/img/uad.png') }}" class="card-img-top w-50 h-100 mx-auto m-3">
-                <div class="card-body">
-                    <h5 class="card-title">Universitas Ahmad Dahlan</h5>
-                    <p class="card-text">Area sekitar Universitas Ahmad Dahlan</p>
+    <section class="container my-5">
+        <h3 class="fw-bold">Rekomendasi Produk</h3>
+        <span class="d-flex justify-content-end"><a href="{{route('allproduct')}}" class="text-decoration-none">lihat semua</a></span>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+                @foreach ($products as $data)
+                <div class="col d-flex">
+                    <div class="card mt-3" style="width: 18rem;" data-aos="zoom-out" data-aos-delay="300">
+                        <img src="image/{{ $data->foto }}" class="card-img-top mx-auto pt-2 w-100 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $data->nama_product }}</h5>
+                            <p class="card-text">{{ $data->fasilitas }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Rp {{number_format($data->harga)}}</b></li>
+                        </ul>
+                        <div class="card-body text-center ">
+                            <a href="{{ route('show', $data->id) }}"
+                                class="card-link text-decoration-none text-brown">View
+                                detail</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body text-center bg-primary">
-                    <a href="{{route('uad')}}" class="card-link text-light text-decoration-none">View More</a>
-                </div>
+                @endforeach
             </div>
         </div>
 
-        <div class="col d-flex justify-content-center align-content-center">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('asset/img/umy.png')}}" class="card-img-top w-50 h-100 mx-auto m-3">
-                <div class="card-body">
-                    <h5 class="card-title">Universitas Muhammadiyah Yogyakarta</h5>
-                    <p class="card-text">Area sekitar Universitas Muhammadiyah Yogyakarta</p>
-                </div>
-                <div class="card-body text-center bg-primary">
-                    <a href="{{route('umy')}}" class="card-link text-light text-decoration-none">View More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col d-flex justify-content-center align-content-center">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('asset/img/ugm.png') }}" class="card-img-top w-50 h-100 mx-auto m-3">
-                <div class="card-body">
-                    <h5 class="card-title">Universitas Gadjah Mada</h5>
-                    <p class="card-text">Area sekitar Universitas Gadjah Mada</p>
-                </div>
-                <div class="card-body text-center bg-primary">
-                    <a href="{{route('ugm')}}" class="card-link text-light text-decoration-none">View More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col d-flex justify-content-center align-content-center">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('asset/img/uty.jpg') }}" class="card-img-top w-50 h-100 mx-auto m-3">
-                <div class="card-body">
-                    <h5 class="card-title">Universitas Technologi Yogyakarta</h5>
-                    <p class="card-text">Area sekitar Universitas Technologi Yogyakarta</p>
-                </div>
-                <div class="card-body text-center bg-primary">
-                    <a href="{{route('uty')}}" class="card-link text-light text-decoration-none">View More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col d-flex justify-content-center align-content-center">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('asset/img/alma.png') }}" class="card-img-top w-50 h-100 mx-auto m-3">
-                <div class="card-body">
-                    <h5 class="card-title">Universitas Alma Atta</h5>
-                    <p class="card-text">Area sekitar Alma Atta</p>
-                </div>
-                <div class="card-body text-center bg-primary">
-                    <a href="{{route('uaa')}}" class="card-link text-light text-decoration-none">View More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col d-flex justify-content-center align-content-center">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('asset/img/amikom.png') }}" class="card-img-top w-50 h-100 mx-auto m-3">
-                <div class="card-body">
-                    <h5 class="card-title">Universitas Amikom</h5>
-                    <p class="card-text">Area sekitar Amikom</p>
-                </div>
-                <div class="card-body text-center bg-primary">
-                    <a href="{{route('amikom')}}" class="card-link text-light text-decoration-none">View More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col d-flex justify-content-center align-content-center">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('asset/img/uii.png') }}" class="card-img-top w-50 h-100 mx-auto m-3">
-                <div class="card-body">
-                    <h5 class="card-title">Universitas Islam Indonesia</h5>
-                    <p class="card-text">Area sekitar Universitas Islam Indonesia</p>
-                </div>
-                <div class="card-body text-center bg-primary">
-                    <a href="{{route('uii')}}" class="card-link text-light text-decoration-none">View More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+    </section>
+</body>
 @endsection

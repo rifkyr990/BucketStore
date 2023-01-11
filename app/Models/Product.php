@@ -8,19 +8,15 @@ use App\Models\Reservasi;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Kost extends Model
+class Product extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nama_pemilik',
-        'telp',
-        'alamat',
-        'category_id',
-        'total_kamar',
-        'fasilitas',
-        'luas',
+        'nama_product',
+        'kelengkapan',
         'foto',
         'harga',
+        'category_id',
         'user_id',
     ];
 
@@ -29,13 +25,8 @@ class Kost extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function type()
-    {
-        return $this->belongsTo(Type::class);
-    }
-
     public function reservasi()
     {
-        return $this->hasMany(Reservasi::class, 'kost_id');
+        return $this->hasMany(Reservasi::class, 'product_id');
     }
 }

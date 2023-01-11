@@ -3,29 +3,29 @@
 @section('content')
 
 <div class="container">
-    <h2 class="text-center fw-bold mt-5">Reservasi Saya</h2>
+    <h2 class="text-center fw-bold mt-5">Pesanan Saya</h2>
     <div class="custom-separator mx-auto my-3 mb-4 bg-brown"></div>
 
 
     <div class="row">
         @foreach ($reservasi as $data)
-        <div class="col-sm-4">
+        <div class="col-sm-12">
             <div class="bg-light shadow-sm pt-4 px-4 my-5">
                 <ul style="list-style: none; padding:0;">
-                    <li><b>ID Kost :</b> {{$data->kost_id}}</li>
+                    <li><b>ID Pesanan :</b> {{$data->product_id}}</li>
                     <li><b>Nama :</b> {{$data->nama_pemesan}}</li>
                     <li><b>Alamat :</b> {{ $data->alamat_pemesan }}</li>
                     <li><b>Telp :</b> {{ $data->telp }}</li>
-                    <li><b>Tanggal reservasi :</b> {{$data->tanggal}}</li>
+                    <li><b>Tanggal masuk :</b> {{$data->tanggal}}</li>
+                    <li><b>Tanggal masuk :</b> {{$data->tanggal_ambil}}</li>
                     <li><b>Status Orderan :</b> {{ $data->status->nama_status }}</li>
                     <li><b>Status pembayaran :</b> {{$data->pembayaran->nama_pembayaran}}</li>
                     <li><b>Total harga :</b> Rp.
-                        {{number_format($data->kost->harga)}}</li>
+                        {{number_format($data->total_cost)}}</li>
 
                     <div class="d-flex justify-content-end mt-3 pb-3">
                         <a href="" class="btn btn-danger mx-2" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">Complaint</a>
-                        <a href="" class="btn btn-primary">Selesai</a>
+                            data-bs-target="#staticBackdrop">Cancel</a>
                     </div>
 
                     <!-- Modal -->

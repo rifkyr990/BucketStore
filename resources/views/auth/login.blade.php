@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<body class="bg-cream">
 <div class="container">
     <section class="ftco-section">
         <div class="container">
@@ -46,12 +47,12 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">
+                                    <button type="submit" class="form-control btn btn-brown text-light rounded submit px-3">
                                         {{ __('Login') }}
                                     </button>
                                 </div>
                                 <div class="form-group d-md-flex">
-                                    <div class="w-50 text-left">
+                                    <div class="w-50 text-left mt-2">
                                         <label class="form-check-label" for="remember">
                                             {{ __('Remember Me') }}
                                         </label>
@@ -59,16 +60,9 @@
                                             {{ old('remember') ? 'checked' : '' }}>
                                         </label>
                                     </div>
-                                    <div class="w-50 text-md-right">
-                                        @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
-                                        </a>
-                                        @endif
-                                    </div>
                                 </div>
                             </form>
-                            <p class="text-center">Not a member? <a data-toggle="tab" href="{{ route('register') }}">Sign Up</a></p>
+                            <p class="mt-auto text-center">Not a member? <a data-toggle="tab" href="{{ route('register') }}">Sign Up</a></p>
                         </div>
                     </div>
                 </div>
@@ -76,4 +70,5 @@
         </div>
     </section>
 </div>
+</body>
 @endsection

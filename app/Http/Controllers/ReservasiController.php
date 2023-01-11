@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kost;
+use App\Models\Cart;
 use App\Models\Status;
 use App\Models\Confirm;
+use App\Models\Product;
 use App\Models\Reservasi;
 use App\Models\Pembayaran;
 use Illuminate\Http\Request;
@@ -32,10 +33,10 @@ class ReservasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Kost $kost)
+    public function create(Product $product)
     {
         
-        return view('reservasi.create', compact('kost'));
+        return view('reservasi.create', compact('product'));
     }
 
     /**
@@ -46,21 +47,33 @@ class ReservasiController extends Controller
      */
     public function addreserv(Request $request, $id)
     {
-        $kost = Kost::find($id);
+        $product = Product::find($id);
 
         $reservasi = new Reservasi;
-        $reservasi->kost_id = $kost->id;
+        $reservasi->product_id = $product->id;
+        $reservasi->nama_product = $product->nama_product;
+        $reservasi->harga = $product->harga;
         $reservasi->nama_pemesan = $request->nama_pemesan;
         $reservasi->alamat_pemesan = $request->alamat_pemesan;
         $reservasi->telp = $request->telp;
+        $reservasi->jumlah = $request->jumlah;
         $reservasi->tanggal = $request->tanggal;
-        $reservasi->total_cost = $kost->harga;
+        $reservasi->tanggal_ambil = $request->tanggal_ambil;
+        $reservasi->total_cost = $reservasi->harga * $reservasi->jumlah;
         $reservasi->user_id = auth()->id();
         $reservasi->save();
 
         return redirect()->route('payment', $reservasi->id)->with('success', 'berhasil');
     }
 
+    public function addcart($id) {
+        $product = Product::find($id);
+
+        $cart = new Cart;
+        $cart->nama_product = $product->nama_product;
+        $cart->harga = $product->harga;
+
+    }
     /**
      * Display the specified resource.
      *
@@ -142,7 +155,7 @@ class ReservasiController extends Controller
     }
 
     public function payment(Reservasi $reservasi)
-    {
+    {   
         return view('reservasi.payment', compact('reservasi'));
     }
     /**
