@@ -108,10 +108,22 @@ class productController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        $request->validate([
+            'category_id' => 'required',
+        ]);
+        
         $input = $request->all();
+        if ($gambar = $request->file('foto')) {
+            $destinationPath = 'image/';
+            $gambarImage = date('YmdHis') . "." .$gambar->getClientOriginalExtension();
+            $gambar->move($destinationPath, $gambarImage);
+        $input['foto'] = "$gambarImage";
+        } else {
+            unset($input['foto']);
+        }
         $product->update($input);
 
-        return redirect()->route('home')->with('success', 'Orderan berhasil diupdate');
+        return redirect()->route('dashboard')->with('success', 'Orderan berhasil diupdate');
     }
 
     /**

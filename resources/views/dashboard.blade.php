@@ -6,34 +6,25 @@
 <h2 class="text-center fw-bold">Admin Dashboard</h2>
     <div class="custom-separator my-3 mb-5 mx-auto bg-brown"></div>
 
-    <li class="my-4"><a href="" class="text-decoration-none fs-5 fw-bold text-dark">Manage Kost</a></li>
-    <table class="table table-bordered">
+    <li class="my-4"><a href="" class="text-decoration-none fs-5 fw-bold text-dark">Manage Product</a></li>
+    <table class="table table-striped table-bordered border-1">
         <thead>
             <tr class="text-center">
                 <td scope="col">No</td>
-                <td scope="col">Nama</td>
-                <td scope="col" width="150">alamat</td>
-                <td scope="col" width="400">Design totebag</td>
-                <td scope="col">Jenis Material</td>
-                <td scope="col" width="150">size</td>
-                <td scope="col" width="300">Status pembayara</td>
-                <td scope="col" width="300">Status pesanan</td>
-                <td scope="col">Total bayar</td>
-                <td scope="col" width="300">Action</td>
+                <td scope="col">Nama product</td>
+                <td scope="col" width="150">Deskripsi</td>
+                <td scope="col" width="400">Jenis</td>
+                <td scope="col">Foto</td>
+                <td scope="col" width="150">Harga</td>
             </tr>
         </thead>
         <tbody>
-            @foreach ($kosts as $data)
+            @foreach ($products as $data)
             <tr class="text-center">
                 <td>{{$loop->iteration}}</td>
-                <td>{{$data->nama_pemilik}}</td>
-                <td>{{$data->telp}}</td>
-                <td>{{$data->alamat}}</td>
+                <td>{{$data->nama_product}}</td>
+                <td>{{$data->kelengkapan}}</td>
                 <td>{{$data->category->nama_kategori}}</td>
-                <td>{{$data->total_kamar}}</td>
-                <td>{{$data->fasilitas}}</td>
-                <td>{{$data->type->nama_type}}</td>
-                <td>{{$data->luas}}</td>
                 <td><img src="image/{{ $data->foto }}" class="img-fluid rounded-start w-50"></td>
                 <td>{{number_format($data->harga)}}</td>
                 <td>
@@ -52,8 +43,8 @@
         </tbody>
     </table>
 
-    <li class="my-4"><a href="" class="text-decoration-none fs-5 fw-bold text-dark">Manage Reservation</a></li>
-    <table class="table table-bordered">
+    <li class="my-4"><a href="" class="text-decoration-none fs-5 fw-bold text-dark">Manage Order</a></li>
+    <table class="table table-striped">
         <thead>
             <tr class="text-center">
                 <td scope="col">No</td>
@@ -96,7 +87,7 @@
     </table>
 
     <li class="my-4"><a href="" class="text-decoration-none fs-5 fw-bold text-dark">Konfirmasi pembayaran</a></li>
-    <table class="table table-bordered">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr class="text-center">
                 <td scope="col">No</td>
